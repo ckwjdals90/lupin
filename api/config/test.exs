@@ -16,3 +16,6 @@ config :lupin, LupinWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Bcrypy Elixir config
+config :bcrypt_elixir, :log_rounds, 4
