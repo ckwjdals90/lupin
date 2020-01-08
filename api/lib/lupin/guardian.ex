@@ -1,6 +1,7 @@
 defmodule Lupin.Guardian do
   use Guardian, otp_app: :lupin
 
+  alias Lupin.Repo
   alias Lupin.Auth.User
 
   def subject_for_token(resource, _claims) do
