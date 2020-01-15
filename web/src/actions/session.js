@@ -1,12 +1,12 @@
 import { reset } from 'redux-form';
 import api from '../api';
 
-function set urrentUser(dispatch, resp) {
+function setCurrentUser(dispatch, resp) {
   localStorage.setItem('token', JSON.stringify(resp.meta.token));
   dispatch({ type: 'AUTHENTICATION_SUCCESS', resp });
 }
 
-export function login(data, roiuter) {
+export function login(data, router) {
   return dispatch => api.post('/sessions', data)
     .then((resp) => {
       setCurrentUser(dispatch, resp);

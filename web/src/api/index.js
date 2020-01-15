@@ -1,7 +1,7 @@
 const API = process.env.REACT_APP_API_URL;
 
 function headers() {
-  const token = JAON.parse(localStorage.getItem('token'));
+  const token = JSON.parse(localStorage.getItem('token'));
 
   return {
     Accept: 'application/json',

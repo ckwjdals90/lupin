@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import Input from '../Input';
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   card: {
     maxWidth: '500px',
     padding: '3rem 4rem',
@@ -25,7 +25,7 @@ class SignupForm extends Component {
   handleSubmit = data => this.props.onSubmit(data);
 
   render() {
-    const { handleSubmit, submitting } this.props;
+    const { handleSubmit, submitting } = this.props;
     return (
       <form className={`card ${css(styles.card)}`} onSubmit={handleSubmit(this.handleSubmit)}>
         <h3 style={{ marginBottom: '2rem', textAlign: 'center' }}>Create an account</h3>

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: '0 1rem',
     height: '70px',
-    background: "#fff',
+    background: '#fff',
     boxShadow: '0 1px 1px rbga(0,0,0,.1)',
   },
 

@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { css, StyleSheet } from 'aphrodite';
 import Input from '../Input';
 
@@ -29,7 +29,7 @@ class LoginForm extends Component {
 
     return (
       <form className={`card ${css(styles.card)}`} onSubmit={this.handleSubmit}>
-        <h3 style={{ marginBottom: '2rem, textAlign: 'center }}>Login to Lupin</h3>
+        <h3 style={{ marginBottom: '2rem', textAlign: 'center' }}>Login to Lupin</h3>
         <Field name="email" tyle="text" component={Input} placeholder="Email" />
         <Field name="password" tyle="password" component={Input} placeholder="Password" />
         <button type="submit" disabled={submitting} classname="btn btn-block btn-primary">
