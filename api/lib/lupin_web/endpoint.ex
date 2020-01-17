@@ -40,5 +40,7 @@ defmodule LupinWeb.Endpoint do
     key: "_lupin_key",
     signing_salt: "k4VDnJNt"
 
+  plug CORSPlug
+
   plug LupinWeb.Router
 end
