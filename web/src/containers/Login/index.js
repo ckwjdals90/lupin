@@ -2,9 +2,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {login} from '../../actions/session';
-import LoginForm from '../../components/LoginForm';
-import Navbar from '../../components/Navbar';
+import { login } from '../../actions/session';
+import { LoginForm, Navbar } from '../../components';
 
 type Props = {
   login: () => void,

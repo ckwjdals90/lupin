@@ -1,9 +1,8 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import { BrowserRouter as Router } from 'react-router-dom';
 // import './styles/materialize.css';
 import './styles/bootstrap.css';
 import './styles/fontawesome.css';
@@ -13,9 +12,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <Routes />
-    </Router>
+    <Routes />
   </Provider>
   , document.getElementById('root'));
 

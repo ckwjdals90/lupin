@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logout } from '../../actions/session';
-import Navbar from '../../components/Navbar';
+import { Navbar } from '../../components';
 
 type Props = {
   logout: () => void,
