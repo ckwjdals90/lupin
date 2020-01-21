@@ -7,12 +7,12 @@ import store from './store';
 import './styles/bootstrap.css';
 import './styles/fontawesome.css';
 import './index.css';
-import Routes from './Routes.js';
+import { App, } from './containers';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Routes />
+    <App />
   </Provider>
   , document.getElementById('root'));
 

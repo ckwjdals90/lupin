@@ -8,12 +8,14 @@ import { NotFound } from './components';
 const Routes = () => (
   <React.Fragment>
     <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route component={NotFound} />
-      </Switch>
+      <div style={{ display: 'flex', flex: '1' }}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
     </Router>
   </React.Fragment>
 )

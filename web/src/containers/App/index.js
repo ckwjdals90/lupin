@@ -1,27 +1,35 @@
 // @flow
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
+import { connect } from 'react-redux';
+import { authenticate } from '../../actions/session';
 import './index.css';
+import Routes from '../../Routes.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+type Props = {
+  authenticate: () => void,
 }
 
-export default App;
+class App extends Component {
+  componentDidMount() {
+    const token = localStorage.getItem('token');
+
+    if (token) {
+      this.props.authenticate();
+    }
+  }
+
+  props: Props
+
+  render() {
+    return (
+      <div className="App">
+        <Routes />
+      </div>
+    );
+  }
+}
+
+export default connect(
+  null,
+  { authenticate }
+)(App);
