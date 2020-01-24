@@ -15,8 +15,8 @@ const AuthRoute = ({ children, isAuthenticated, willAuthenticate, ...rest }: Pro
         console.log("isAuthenticated");
         return <Redirect to={{ pathname: "/", state: { from: location } }} />
       }
-      if (willAuthenticate) { console.log("willAuthenticate");  console.log(children); return null; }
-      if (!willAuthenticate && isAuthenticated) { console.log("hmmm"); return children; }
+      if (willAuthenticate) { return null; }
+      if (!willAuthenticate && !isAuthenticated) { return children; }
       return null;
     }}
   />

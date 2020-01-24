@@ -28,11 +28,11 @@ class LoginForm extends Component {
     const { handleSubmit, submitting } = this.props;
 
     return (
-      <form className={`card ${css(styles.card)}`} onSubmit={this.handleSubmit}>
+      <form className={`card ${css(styles.card)}`} onSubmit={handleSubmit(this.handleSubmit)}>
         <h3 style={{ marginBottom: '2rem', textAlign: 'center' }}>Login to Lupin</h3>
         <Field name="email" tyle="text" component={Input} placeholder="Email" />
         <Field name="password" tyle="password" component={Input} placeholder="Password" />
-        <button type="submit" disabled={submitting} classname="btn btn-block btn-primary">
+        <button type="submit" disabled={submitting} className="btn btn-block btn-primary">
           {submitting ? 'Logging in...' : 'Login'}
         </button>
         <hr style={{ margin: '2rem 0' }} />
